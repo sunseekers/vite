@@ -1,0 +1,1 @@
+console.log("我是通过module形式引入的")

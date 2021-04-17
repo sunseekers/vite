@@ -1,0 +1,33 @@
+.toast {
+  position: fixed;
+  bottom: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  background: rgba(33, 32, 44, 0.9);
+  border-radius: 2.133vw;
+  padding: 3.2vw 4.267vw;
+  font-size: 4.267vw;
+  line-height: 6.4vw;
+  color: #fff;
+  z-index: 1;
+}
+
+#app:empty~.toast::before {
+  content: '';
+  width: .8em;
+  height: .8em;
+  border: 0.533vw solid;
+  border-top-color: transparent;
+  border-radius: 1em;
+  flex-shrink: 0;
+  margin: .1em .5em .1em 0;
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
